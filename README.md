@@ -11,7 +11,7 @@ This tool can help you sync your Medium posts with your own Jekyll blog. It will
 # Setup
 1. Click the green button 'Use this template' located above and select 'Create a new repository'.
 2. Enter respository name as the URL path you wish to use and select 'public', then click 'Create repository from template'.
-- respository name(URL path) MUST end with `.github.io`
+- respository name(URL path) usually end with `.github.io`
 
 ### First-time run
 
