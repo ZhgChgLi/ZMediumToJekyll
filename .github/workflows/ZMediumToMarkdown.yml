@@ -2,13 +2,22 @@ name: ZMediumToMarkdown
 on:
   workflow_dispatch:
   schedule:
-    - cron: "10 1 15 * *" # At 01:10 on day-of-month 15.
+    - cron: "10 1 * * *" # At 01:10 on every day.
 
 jobs:
   ZMediumToMarkdown:
     runs-on: ubuntu-latest
     steps:
+    - name: Run read-yaml action
+      id: yaml-data
+      uses: jbutcher5/read-yaml@main
+      with:
+        file: './_zmediumtomarkdown.yml'
+        key-path: '["medium_username"]'
+    - name: Display read-yaml output
+      run: echo "mediume_username ${{ steps.yaml-data.outputs.data }}"    
     - name: ZMediumToMarkdown Automatic Bot
+      if: steps.yaml-data.outputs.data != ''
       uses: ZhgChgLi/ZMediumToMarkdown@main
       with:
-        command: '-j zhgchgli'
+        command: "-j ${{ steps.yaml-data.outputs.data }}"
