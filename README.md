@@ -1,4 +1,4 @@
-# About
+# MediumToJekyll
 
 This tool can help you sync your Medium posts with your own Jekyll blog. It will automatically download your posts from Medium, convert them to Markdown, and upload them to your repository. 
 
