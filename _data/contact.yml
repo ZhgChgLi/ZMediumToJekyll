@@ -3,11 +3,11 @@
 -
   type: medium
   icon: 'fab fa-medium'
-  url: 'https://medium.com/@zhgchgli'
+  url:
 -
    type: linkedin
    icon: 'fab fa-linkedin'
-   url:  'https://www.linkedin.com/in/zhgchgli'
+   url:
 -
   type: email
   icon: 'fas fa-envelope'
