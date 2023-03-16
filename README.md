@@ -1,49 +1,30 @@
-[![Automatic build](../../actions/workflows/pages-deploy.yml/badge.svg)](../../actions/workflows/pages-deploy.yml)
-
-[![pages-build-deployment](../../actions/workflows/pages/pages-build-deployment/badge.svg)](../../actions/workflows/pages/pages-build-deployment)
-
-[![ZMediumToMarkdown](https://github.com/ZhgChgLi/zhgchgli.github.io/actions/workflows/ZMediumToMarkdown.yml/badge.svg)](https://github.com/ZhgChgLi/zhgchgli.github.io/actions/workflows/ZMediumToMarkdown.yml)
-
-# Setup
-### Click the green button 'Use this template' located above and select 'Create a new repository'.
-![image](https://user-images.githubusercontent.com/33706588/225689452-55ca8821-200a-451c-8225-1002db3bb17a.png)
-
-### Enter respository name as the URL path you wish to use and select 'public', then click 'Create repository from template'.
-![image](https://user-images.githubusercontent.com/33706588/225689630-7af4905a-9c40-4352-8ce9-617bded1cbcf.png)
-
-- respository name(URL path) MUST end with `.github.io`
-
-----
-
 # About
-
-Thank you for using [ZMediumToMarkdown](https://github.com/ZhgChgLi/ZMediumToMarkdown).
 
 This tool can help you sync your Medium posts with your own Jekyll blog. It will automatically download your posts from Medium, convert them to Markdown, and upload them to your repository. 
 
-If you find this tool helpful, please consider to [buy me a coffee](https://www.buymeacoffee.com/zhgchgli).❤️
+[![Automatic build](../../actions/workflows/pages-deploy.yml/badge.svg)](../../actions/workflows/pages-deploy.yml)
+[![pages-build-deployment](../../actions/workflows/pages/pages-build-deployment/badge.svg)](../../actions/workflows/pages/pages-build-deployment)
+[![ZMediumToMarkdown](https://github.com/ZhgChgLi/zhgchgli.github.io/actions/workflows/ZMediumToMarkdown.yml/badge.svg)](https://github.com/ZhgChgLi/zhgchgli.github.io/actions/workflows/ZMediumToMarkdown.yml)
 
-Powered by [Jekyll](https://jekyllrb.com/) with [Chirpy theme](https://github.com/cotes2020/jekyll-theme-chirpy).
-
-Also, if you would like to remove the ZMediumToMarkdown watermark located at the bottom of the page, you may do so. I don't mind.
-
-[![Buy Me A Coffe](https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20beer!&emoji=%F0%9F%8D%BA&slug=zhgchgli&button_colour=FFDD00&font_colour=000000&font_family=Bree&outline_colour=000000&coffee_colour=ffffff)](https://www.buymeacoffee.com/zhgchgli)
+----
 
 # Setup
+1. Click the green button 'Use this template' located above and select 'Create a new repository'.
+2. Enter respository name as the URL path you wish to use and select 'public', then click 'Create repository from template'.
+- respository name(URL path) MUST end with `.github.io`
 
+### First-time run
 
-# First-time run
-Please refer to the configuration information in the section below and make sure to specify your Medium username in the `_zmediumtomarkdown.yml` file.
+1. Please refer to the configuration information in the section below and make sure to specify your Medium username in the `_zmediumtomarkdown.yml` file.
+2. Then, you can manually run the ZMediumToMarkdown GitHub action by going to the `Actions` tab in your GitHub repository, selecting the `ZMediumToMarkdown` action, clicking on the `Run workflow` button, and selecting the `main` branch.
 
-Then, you can manually run the ZMediumToMarkdown GitHub action by going to the `Actions` tab in your GitHub repository, selecting the `ZMediumToMarkdown` action, clicking on the `Run workflow` button, and selecting the `main` branch.
+3. Please **wait for the action to download, convert, and commit your posts to your repository (note that the first run may be slow)**.
 
-You can check the progress of the ZMediumToMarkdown action on the same GitHub action page.
+4. Once the ZMediumToMarkdown action has completed, **you should also wait for the `Automatic Build` action to finish**.
 
-**Please wait for the action to download, convert, and commit your posts to your repository (note that the first run may be slow).**
+5. Go to the `Settings` section of your GitHub repository and select `Pages`, In the `Branch` field, select `gh-pages`, and leave `/(root)` selected as the default. Click `Save` and **wait for the `Pages build and deployment` action to finish**.
 
-Once the ZMediumToMarkdown action has completed, **you should wait for the Automatic Build & Deploy action to finish**.
-
-After this is done, you can visit your `xxx.github.io` page to check the results or use `bundle exec jekyll serve` in your terminal for local testing.
+After all is done, you can visit your `xxx.github.io` page to check the results or use `bundle exec jekyll serve` in your terminal for local testing.🎉
 
 # Configuration
 
@@ -78,12 +59,13 @@ Users of ZMediumToMarkdown are solely responsible for ensuring that they have th
 
 By using ZMediumToMarkdown, users acknowledge and agree to comply with all applicable copyright laws and regulations.
 
+# Troubleshooting
+## My GitHub page keeps presenting a 404 error or doesn't update with the latest posts.
+- Please make sure you have followed the setup steps above in order.
+- Wait for all GitHub actions to finish, including the `Pages build and deployment` and `Automatic Build` actions, you can check the progress on the `Actions` tab.
+- Make sure you have the correct settings selected in `Settings -> Pages`.
+
 ### Things to know
-
-**Every commit and post change will trigger the Automatic Build & Deploy action. Please wait for this action to finish before checking the final result.**
-
-You can create your own Markdown posts in the `_posts` directory by naming the file as `YYYY-MM-DD-POSTNAME` and recommend using lowercase file names.
-
-You can include images and other resources in the /assets directory.
-
-Additionally, you may delete this introductory post.
+- **Every commit and post change will trigger the `Automatic Build` & `Pages build and deployment` action. Please wait for this action to finish before checking the final result.**
+- You can create your own Markdown posts in the `_posts` directory by naming the file as `YYYY-MM-DD-POSTNAME` and recommend using lowercase file names.
+- You can include images and other resources in the /assets directory.
