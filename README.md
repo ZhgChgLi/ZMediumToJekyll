@@ -1,6 +1,8 @@
 # MediumToJekyll
 
-This tool can help you sync your Medium posts with your own Jekyll blog. It will automatically download your posts from Medium, convert them to Markdown, and upload them to your repository. 
+Move your Medium blog to Jekyll with just one click and automatically sync it in the future.
+
+This tool can help you sync your Medium posts with your own Jekyll blog. It will automatically download your posts from Medium, convert them to Markdown, and upload them to your repository, check out [my blog](https://github.com/ZhgChgLi/zhgchgli.github.io/) for online demo [zhgchg.li](https://zhgchg.li)
 
 [![Automatic build](../../actions/workflows/pages-deploy.yml/badge.svg)](../../actions/workflows/pages-deploy.yml)
 [![pages-build-deployment](../../actions/workflows/pages/pages-build-deployment/badge.svg)](../../actions/workflows/pages/pages-build-deployment)
