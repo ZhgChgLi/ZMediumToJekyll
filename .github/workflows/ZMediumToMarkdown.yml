@@ -8,6 +8,7 @@ jobs:
   ZMediumToMarkdown:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v3
     - name: Run read-yaml action
       id: yaml-data
       uses: jbutcher5/read-yaml@main
