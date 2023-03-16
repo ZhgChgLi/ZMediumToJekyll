@@ -4,7 +4,16 @@
 
 [![ZMediumToMarkdown](https://github.com/ZhgChgLi/zhgchgli.github.io/actions/workflows/ZMediumToMarkdown.yml/badge.svg)](https://github.com/ZhgChgLi/zhgchgli.github.io/actions/workflows/ZMediumToMarkdown.yml)
 
+# Setup
+### Click the green button 'Use this template' located above and select 'Create a new repository'.
+![image](https://user-images.githubusercontent.com/33706588/225689452-55ca8821-200a-451c-8225-1002db3bb17a.png)
 
+### Enter respository name as the URL path you wish to use and select 'public', then click 'Create repository from template'.
+![image](https://user-images.githubusercontent.com/33706588/225689630-7af4905a-9c40-4352-8ce9-617bded1cbcf.png)
+
+- respository name(URL path) MUST end with `.github.io`
+
+----
 
 # About
 
@@ -19,6 +28,9 @@ Powered by [Jekyll](https://jekyllrb.com/) with [Chirpy theme](https://github.co
 Also, if you would like to remove the ZMediumToMarkdown watermark located at the bottom of the page, you may do so. I don't mind.
 
 [![Buy Me A Coffe](https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20beer!&emoji=%F0%9F%8D%BA&slug=zhgchgli&button_colour=FFDD00&font_colour=000000&font_family=Bree&outline_colour=000000&coffee_colour=ffffff)](https://www.buymeacoffee.com/zhgchgli)
+
+# Setup
+
 
 # First-time run
 Please refer to the configuration information in the section below and make sure to specify your Medium username in the `_zmediumtomarkdown.yml` file.
@@ -70,7 +82,7 @@ By using ZMediumToMarkdown, users acknowledge and agree to comply with all appli
 
 **Every commit and post change will trigger the Automatic Build & Deploy action. Please wait for this action to finish before checking the final result.**
 
-You can create your own Markdown posts in the _posts directory by naming the file as `YYYY-MM-DD-POSTNAME`.
+You can create your own Markdown posts in the `_posts` directory by naming the file as `YYYY-MM-DD-POSTNAME` and recommend using lowercase file names.
 
 You can include images and other resources in the /assets directory.
 
