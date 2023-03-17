@@ -4,11 +4,12 @@
 [![pages-build-deployment](../../actions/workflows/pages/pages-build-deployment/badge.svg)](../../actions/workflows/pages/pages-build-deployment)
 [![ZMediumToMarkdown](https://github.com/ZhgChgLi/zhgchgli.github.io/actions/workflows/ZMediumToMarkdown.yml/badge.svg)](https://github.com/ZhgChgLi/zhgchgli.github.io/actions/workflows/ZMediumToMarkdown.yml)
 
-Move your Medium account to Jekyll blog with just one click and automatically sync it in the future.
+
+This tool can help you move your Medium posts to a Jekyll blog and keep them in sync in the future.
 
 It will automatically download your posts from Medium, convert them to Markdown, and upload them to your repository, check out [my blog](https://github.com/ZhgChgLi/zhgchgli.github.io/) for online demo [zhgchg.li](https://zhgchg.li).
 
-This tool is powered by [ZMediumToMarkdown](https://github.com/ZhgChgLi/ZMediumToMarkdown).
+Powered by [ZMediumToMarkdown](https://github.com/ZhgChgLi/ZMediumToMarkdown).
 
 ----
 
