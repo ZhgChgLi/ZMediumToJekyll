@@ -6,16 +6,19 @@
 
 Move your Medium blog to Jekyll with just one click and automatically sync it in the future.
 
-This tool can help you sync your Medium posts with your own Jekyll blog. It will automatically download your posts from Medium, convert them to Markdown, and upload them to your repository, check out [my blog](https://github.com/ZhgChgLi/zhgchgli.github.io/) for online demo [zhgchg.li](https://zhgchg.li).
+This tool can help you sync your Medium posts with your own Jekyll blog.
+
+It will automatically download your posts from Medium, convert them to Markdown, and upload them to your repository, check out [my blog](https://github.com/ZhgChgLi/zhgchgli.github.io/) for online demo [zhgchg.li](https://zhgchg.li).
 
 This tool is powered by [ZMediumToMarkdown](https://github.com/ZhgChgLi/ZMediumToMarkdown).
 
 ----
 
 ## Setup
-1. Click the green button 'Use this template' located above and select 'Create a new repository'.
-2. Enter respository name as the URL path you wish to use and select 'public', then click 'Create repository from template'.
+1. Click the green button `Use this template` located above and select `Create a new repository`.
+2. Enter respository name as the URL path you wish to use and select `public`, then click `Create repository from template`.
 - respository name(URL path) **MUST** end with `.github.io`
+3. Granted access to GitHub Actions, go to the `Settings` tab in your GitHub repository, select `Actions` -> `General`, and find the `Workflow permissions` section. Below that, select `Read and write permissions`, and click on `Save` to save the changes.
 
 ### First-time run
 
@@ -69,10 +72,14 @@ By using ZMediumToMarkdown, users acknowledge and agree to comply with all appli
 - Wait for all GitHub actions to finish, including the `Pages build and deployment` and `Automatic Build` actions, you can check the progress on the `Actions` tab.
 - Make sure you have the correct settings selected in `Settings -> Pages`.
 
+### I don't see gh-pages listed in the branch field of the Pages settings.
+- Like before, you should follow the step-by-step setup instructions carefully and wait for each step to finish running before proceeding to the next one.
+
+
 #### Things to know
 - **Every commit and post change will trigger the `Automatic Build` & `Pages build and deployment` action. Please wait for this action to finish before checking the final result.**
 - You can create your own Markdown posts in the `_posts` directory by naming the file as `YYYY-MM-DD-POSTNAME` and recommend using lowercase file names.
-- You can include images and other resources in the /assets directory.
+- You can include images and other resources in the `/assets` directory.
 
 ## About
 - [ZhgChg.Li](https://zhgchg.li/)
