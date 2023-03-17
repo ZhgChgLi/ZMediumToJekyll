@@ -11,6 +11,8 @@ It will automatically download your posts from Medium, convert them to Markdown,
 
 Powered by [ZMediumToMarkdown](https://github.com/ZhgChgLi/ZMediumToMarkdown).
 
+If you only want to create a backup or auto-sync of your Medium posts, you can use the GitHub Action directly by following the instructions in this [Wiki](https://github.com/ZhgChgLi/ZMediumToMarkdown/wiki/How-to-use-Github-Action-as-your-free-&-no-code-Medium-Posts-backup-service).
+
 ----
 
 ## Setup
