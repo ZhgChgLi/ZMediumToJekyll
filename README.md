@@ -4,9 +4,7 @@
 [![pages-build-deployment](../../actions/workflows/pages/pages-build-deployment/badge.svg)](../../actions/workflows/pages/pages-build-deployment)
 [![ZMediumToMarkdown](https://github.com/ZhgChgLi/zhgchgli.github.io/actions/workflows/ZMediumToMarkdown.yml/badge.svg)](https://github.com/ZhgChgLi/zhgchgli.github.io/actions/workflows/ZMediumToMarkdown.yml)
 
-Move your Medium blog to Jekyll with just one click and automatically sync it in the future.
-
-This tool can help you sync your Medium posts with your own Jekyll blog.
+Move your Medium account to Jekyll blog with just one click and automatically sync it in the future.
 
 It will automatically download your posts from Medium, convert them to Markdown, and upload them to your repository, check out [my blog](https://github.com/ZhgChgLi/zhgchgli.github.io/) for online demo [zhgchg.li](https://zhgchg.li).
 
@@ -15,29 +13,37 @@ This tool is powered by [ZMediumToMarkdown](https://github.com/ZhgChgLi/ZMediumT
 ----
 
 ## Setup
+
+- You can follow along with each step of this process by watching the following [video tutorial](https://www.youtube.com/watch?v=qsnZKFL3vks)
+
 1. Click the green button `Use this template` located above and select `Create a new repository`.
-2. Enter respository name as the URL path you wish to use and select `public`, then click `Create repository from template`.
-- respository name(URL path) **MUST** end with `.github.io`
-3. Granted access to GitHub Actions, go to the `Settings` tab in your GitHub repository, select `Actions` -> `General`, and find the `Workflow permissions` section. Below that, select `Read and write permissions`, and click on `Save` to save the changes.
+2. Repo Owner could be an organization or username
+2. Enter the **Repository Name**, which usually uses your **GitHub Username/Organization Name** and ends with `.github.io`, for example, my organization name is `zhgchgli` than it'll be `zhgchgli.github.io`.
+3. Select the `public` repository option, and then click on `Create repository from template`.
+4. Grant access to GitHub Actions by going to the `Settings` tab in your GitHub repository, selecting `Actions` -> `General`, and finding the `Workflow permissions section`, then, select `Read and write permissions`, and click on `Save` to save the changes.
+
+*If you choose a different Repository Name, the GitHub page will be `https://username.github.io/Repository Name` instead of `https://username.github.io/`, and you will need to fill in the `baseurl` field in `_config.yml` with your Repository Name.
+
+*If you are using an organization and cannot enable `Read and Write permissions` in the repository settings, please refer to the organization settings page and enable it there.
 
 ### First-time run
 
 1. Please refer to the configuration information in the section below and make sure to specify your Medium username in the `_zmediumtomarkdown.yml` file.
-2. Then, you can manually run the ZMediumToMarkdown GitHub action by going to the `Actions` tab in your GitHub repository, selecting the `ZMediumToMarkdown` action, clicking on the `Run workflow` button, and selecting the `main` branch.
+2. ⌛️ Please wait for the `Automatic Build` and `pages-build-deployment` gitHub actions to finish before making any further changes.
+3. Then, you can manually run the ZMediumToMarkdown GitHub action by going to the `Actions` tab in your GitHub repository, selecting the `ZMediumToMarkdown` action, clicking on the `Run workflow` button, and selecting the `main` branch.
+4. ⌛️ Please wait for the action to download and convert all Medium posts from the specified username, and commit the posts to your repository.
+5. ⌛️ Please wait for the `Automatic Build` and `pages-build-deployment` actions will also need to finish before making any further changes, and that they will start automatically once the ZMediumToMarkdown action has completed.
+6. Go to the `Settings` section of your GitHub repository and select `Pages`, In the `Branch` field, select `gh-pages`, and leave `/(root)` selected as the default. Click `Save`, you can also find the URL for your GitHub page at the top of the page.
+7. ⌛️ Please wait the `Pages build and deployment` action to finish.
+8.  🎉 After all actions are completed, you can visit your xxx.github.io page to verify that the results are correct. Congratulations! 🎉
 
-3. Please **wait for the action to download, convert, and commit your posts to your repository (note that the first run may be slow)**.
+*To avoid expected Git conflicts or unexpected errors, please follow the steps carefully and in order, and be patient while waiting for each action to complete. 
 
-4. After the `ZMediumToMarkdown` action has completed, another action called `Automatic Build` **will start automatically, you should also wait for this action to finish running**.
+*Note that the first time running may take longer.
 
-5. Go to the `Settings` section of your GitHub repository and select `Pages`, In the `Branch` field, select `gh-pages`, and leave `/(root)` selected as the default. Click `Save` and **wait for the `Pages build and deployment` action to finish**.
+*If you open the URL and notice that something is wrong, such as the web style being missing, please ensure that your configuration in the `_config.yml` file is correct.
 
-6. You will obtain the GitHub Pages URL (e.g. `https://github.com/ZhgChgLi/zhgchgli.github.io/`) based on Step 5 (Show in `Settings` -> `Pages`). After all actions have completed, you can go to the URL and view the result.
-
-After all is done, you can visit your `xxx.github.io` page to check the results or use `bundle exec jekyll serve` in your terminal for local testing.🎉
-
-*If you cannot find the `gh-pages` option in the `Branch` field on the `Settings` -> `Pages`, please make sure you have followed steps 1 to 4 carefully and that all actions have completed successfully.
-
-*If you open the URL and notice that something is wrong, such as the web style being missing, please ensure that your configuration in the `_config.yml` file is correct. Alternatively, you can set the base_url to your repository name in that file.
+***Please refer to the 'Things to Know' and 'Troubleshooting' sections below for more information.**
 
 ## Configuration
 
