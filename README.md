@@ -87,7 +87,8 @@ By using ZMediumToMarkdown, users acknowledge and agree to comply with all appli
 - Wait for all GitHub actions to finish, including the `Pages build and deployment` and `Automatic Build` actions, you can check the progress on the `Actions` tab.
 - Make sure you have the correct settings selected in `Settings -> Pages`.
 
-#### Things to know
+## Things to know
+- The `ZMediumToMarkdown` GitHub Action for syncing Medium posts will automatically run every day by default, and you can also manually trigger it on the GitHub Actions page or adjust the sync frequency as needed.
 - **Every commit and post change will trigger the `Automatic Build` & `Pages build and deployment` action. Please wait for this action to finish before checking the final result.**
 - You can create your own Markdown posts in the `_posts` directory by naming the file as `YYYY-MM-DD-POSTNAME` and recommend using lowercase file names.
 - You can include images and other resources in the `/assets` directory.
