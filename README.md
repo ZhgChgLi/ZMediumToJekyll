@@ -7,6 +7,8 @@
 
 This tool can help you move your Medium posts to a Jekyll blog and keep them in sync in the future.
 
+**One time setting, Life time enjoying❤️**
+
 It will automatically download your posts from Medium, convert them to Markdown, and upload them to your repository, check out [my blog](https://github.com/ZhgChgLi/zhgchgli.github.io/) for online demo [zhgchg.li](https://zhgchg.li).
 
 Powered by [ZMediumToMarkdown](https://github.com/ZhgChgLi/ZMediumToMarkdown).
