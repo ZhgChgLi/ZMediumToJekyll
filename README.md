@@ -95,6 +95,11 @@ By using ZMediumToMarkdown, users acknowledge and agree to comply with all appli
 - You can create your own Markdown posts in the `_posts` directory by naming the file as `YYYY-MM-DD-POSTNAME` and recommend using lowercase file names.
 - You can include images and other resources in the `/assets` directory.
 
+## Sites That Use ZMediumToJekyll
+- [https://zhgchg.li](https://zhgchg.li)
+
+You can add your site to this list by creating a pull request. 😝
+
 ## About
 - [ZhgChg.Li](https://zhgchg.li/)
 - [ZhgChgLi's Medium](https://blog.zhgchg.li/)
