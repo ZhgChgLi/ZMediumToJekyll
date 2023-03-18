@@ -94,6 +94,7 @@ By using ZMediumToMarkdown, users acknowledge and agree to comply with all appli
 - **Every commit and post change will trigger the `Automatic Build` & `Pages build and deployment` action. Please wait for this action to finish before checking the final result.**
 - You can create your own Markdown posts in the `_posts` directory by naming the file as `YYYY-MM-DD-POSTNAME` and recommend using lowercase file names.
 - You can include images and other resources in the `/assets` directory.
+- Also, if you would like to remove the ZMediumToMarkdown watermark located at the bottom of the page, you may do so. I don't mind.
 
 ## Sites That Use ZMediumToJekyll
 - [https://zhgchg.li](https://zhgchg.li)
