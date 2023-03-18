@@ -51,6 +51,9 @@ build() {
     rm -rf "$SITE_DIR"
   fi
 
+  # run optimzie markdown
+  bundle exec ruby "tools/optimize_markdown.rb"
+
   # build
   JEKYLL_ENV=production bundle exec jekyll b -d "$SITE_DIR$_baseurl" --config "$_config"
 
