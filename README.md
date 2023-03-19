@@ -7,7 +7,7 @@
 
 This tool can help you move your Medium posts to a Jekyll blog and keep them in sync in the future.
 
-**One time setting, Life time enjoying❤️**
+**One-time setting, Lifetime enjoying❤️**
 
 It will automatically download your posts from Medium, convert them to Markdown, and upload them to your repository, check out [my blog](https://github.com/ZhgChgLi/zhgchgli.github.io/) for online demo [zhgchg.li](https://zhgchg.li).
 
@@ -94,7 +94,9 @@ By using ZMediumToMarkdown, users acknowledge and agree to comply with all appli
 - **Every commit and post change will trigger the `Automatic Build` & `Pages build and deployment` action. Please wait for this action to finish before checking the final result.**
 - You can create your own Markdown posts in the `_posts` directory by naming the file as `YYYY-MM-DD-POSTNAME` and recommend using lowercase file names.
 - You can include images and other resources in the `/assets` directory.
-- Also, if you would like to remove the ZMediumToMarkdown watermark located at the bottom of the page, you may do so. I don't mind.
+- Also, if you would like to remove the ZMediumToMarkdown watermark located at the bottom of the post, you may do so. I don't mind.
+- You can edit the Ruby file at `tools/optimize_markdown.rb` and uncomment lines `10-12`. This will automatically remove the ZMediumToMarkdown watermark at the end of all posts during Jekyll build time.
+- Since ZMediumToMarkdown is not an official tool and Medium does not provide a public API for it, I cannot guarantee that the parser target will not change in the future. However, I have tried to test it for as many cases as possible. If you encounter any rendering errors or Jekyll build errors, please feel free to create an issue and I will fix them as soon as possible.
 
 ## Sites That Use ZMediumToJekyll
 - [https://zhgchg.li](https://zhgchg.li)
