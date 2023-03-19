@@ -7,10 +7,10 @@ class Main
             newLines = []
 
             lines.each do |line|
-                 #if line.include? "converted from Medium by [ZMediumToMarkdown]"
-                 #    break
-                 #end
-                 line = line.gsub(/([^\\]|^)(<)([^>]*[^\\])(>)/, '\1\<\3\>')
+                #if line.include? "converted from Medium by [ZMediumToMarkdown]"
+                #    break
+                #end
+                line = line.gsub(/\[\!.*\((?:https:\/\/(?:www)?\.youtube\.com\/watch\?v=)(\w+)\)(?:{:target=\"_blank\"})?/, '{% include embed/{Platform}.html id=\'{\1}\' %}')
                 newLines.append(line)
             end
 
