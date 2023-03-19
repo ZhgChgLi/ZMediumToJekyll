@@ -10,7 +10,6 @@ class Main
                 #if line.include? "converted from Medium by [ZMediumToMarkdown]"
                 #    break
                 #end
-                line = line.gsub(/\[\!.*\((?:https:\/\/(?:www)?\.youtube\.com\/watch\?v=)(\w+)\)(?:{:target=\"_blank\"})?/, '{% include embed/{Platform}.html id=\'{\1}\' %}')
                 newLines.append(line)
             end
 
