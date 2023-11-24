@@ -84,6 +84,32 @@ Users of ZMediumToMarkdown are solely responsible for ensuring that they have th
 By using ZMediumToMarkdown, users acknowledge and agree to comply with all applicable copyright laws and regulations.
 
 ## Troubleshooting
+### If you are facing Run ZMediumToMarkdown Automatic Bot Failed ❌
+```
+remote: Write access to repository not granted.
+fatal: unable to access 'https://github.com/zhgtest/test-init/': The requested URL returned error: 403
+Error: Invalid status code: 128
+    at ChildProcess.<anonymous> (/home/runner/work/_actions/stefanzweifel/git-auto-commit-action/v4/index.js:17:19)
+    at ChildProcess.emit (node:events:513:28)
+    at maybeClose (node:internal/child_process:1100:16)
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:304:5) {
+  code: 128
+}
+
+Error: Invalid status code: 128
+    at ChildProcess.<anonymous> (/home/runner/work/_actions/stefanzweifel/git-auto-commit-action/v4/index.js:17:19)
+    at ChildProcess.emit (node:events:513:28)
+    at maybeClose (node:internal/child_process:1100:16)
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:304:5)
+```
+
+**Please follow steps below to change workflow permission and retry running github action:**
+
+Settings -> Actions -> General -> Workflow Permissions -> Read and write permissions -> ✅
+
+![1_1ZHF9CIOMV8S12Xw2P4B8g](https://github.com/ZhgChgLi/ZReviewTender-deploy-with-github-action/assets/33706588/b2b04098-aff3-4d37-98cb-f04971e7bf1d.png)
+
+
 ### My GitHub page keeps presenting a 404 error or doesn't update with the latest posts.
 - Please make sure you have followed the setup steps above in order.
 - Wait for all GitHub actions to finish, including the `Pages build and deployment` and `Automatic Build` actions, you can check the progress on the `Actions` tab.
