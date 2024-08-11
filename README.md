@@ -55,10 +55,58 @@ If you only want to create a backup or auto-sync of your Medium posts, you can u
 ### Site Setting
 #### _zmediumtomarkdown.yml
 ```
-medium_username: # enter your username on Medium.com
+medium_username: # Enter your username on Medium.com
 ```
 
 Please specify your Medium username for automatic download and syncing of your posts.
+
+#### Supports Paywall posts
+[ZMediumToMarkdown](https://github.com/ZhgChgLi/ZMediumToMarkdown) requires `uid` and `sid` cookies to access paywalled posts on Medium.
+
+If you don’t provide valid Medium Member cookies, you will receive this warning message while downloading a Medium post if the post is behind a paywall:
+> This post is behind Medium's paywall. You must provide valid Medium Member login cookies to download the full post.
+
+You can obtain `uid` and `sid` cookies from Medium by following these steps:
+1. Log in to a valid Medium Member account.
+2. Right-click anywhere on the Medium webpage.
+3. Select "Inspect" to open the Developer Tools.
+4. Navigate to the "Application" tab and locate the `sid` and `uid` values under "Cookies."
+
+![ZhgChgLi-2024-08-11_22-30-03](https://github.com/user-attachments/assets/35229d1d-501a-4ecf-8f3e-592a02416bb1)
+
+##### Add `sid` and `uid`  to repo Secret
+
+![image](https://github.com/user-attachments/assets/53d5af86-dff1-4676-892d-cb3f93329c48)
+
+Settings -> Secrets and variables -> Actions -> Repository secrets -> New repository secret
+
+![image](https://github.com/user-attachments/assets/6e37040b-20a7-4878-a37c-4596fe96144d)
+
+1.
+- Name: `MEDIUM_COOKIE_SID`
+- Secret: Your `sid` value
+2.
+- Name: `MEDIUM_COOKIE_UID`
+- Secret: Your `uid` value
+
+##### Change Github Action Command
+
+Go To ZMediumToMarkdown.yml Action
+
+![image](https://github.com/user-attachments/assets/3720d6f6-6510-4ef9-8278-b7da9585d819)
+
+Change to command to:
+
+```
+--cookie_uid ${{ secrets.MEDIUM_COOKIE_UID }} --cookie_sid ${{ secrets.MEDIUM_COOKIE_SID }} -j ${{ steps.yaml-data.outputs.data }}
+```
+
+![image](https://github.com/user-attachments/assets/b3fa9a04-7c4e-4518-8194-ca7ec7f6a5ae)
+
+- Commit & Save
+- Done!
+
+**!!!! Ensure that cookie information is stored in repository secrets. Do not expose cookies directly in the action YAML. !!!!**
 
 #### _config.yml & jekyll setting
 
