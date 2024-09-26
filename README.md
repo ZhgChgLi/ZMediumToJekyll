@@ -15,6 +15,12 @@ Powered by [ZMediumToMarkdown](https://github.com/ZhgChgLi/ZMediumToMarkdown).
 
 If you only want to create a backup or auto-sync of your Medium posts, you can use the GitHub Action directly by following the instructions in this [Wiki](https://github.com/ZhgChgLi/ZMediumToMarkdown/wiki/How-to-use-Github-Action-as-your-free-&-no-code-Medium-Posts-backup-service).
 
+# Buy me coffee ❤️❤️❤️
+
+<a href="https://www.buymeacoffee.com/zhgchgli" target="_blank"><img width="545" alt="bmc-button" src="https://github.com/user-attachments/assets/5983bfc9-27fd-49e0-a7f4-eb07657c6e31"></a>
+
+[**If this project has helped you, feel free to sponsor me a cup of coffee, thank you.**](https://www.buymeacoffee.com/zhgchgli)
+
 ----
 
 ## Setup
